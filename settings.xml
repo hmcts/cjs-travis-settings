@@ -8,6 +8,9 @@
             <id>cjscommonplatform-maven-repository</id>
             <username>token</username>
             <password>${env.CLOUDSMITH_API_KEY}</password>
+            <configuration>
+              <timeout>5000</timeout> <!-- 5 seconds -->
+            </configuration>
         </server>
     </servers>
     <profiles>
