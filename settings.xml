@@ -28,18 +28,26 @@
                 </httpConfiguration>
             </configuration>
         </server>
-        <server>
-            <id>central</id>
-            <configuration>
-                <httpConfiguration>
-                    <all>
-                        <connectionTimeout>20000</connectionTimeout> <!-- 20 seconds -->
-                        <readTimeout>900000</readTimeout> <!-- 120 seconds -->
-                    </all>
-                </httpConfiguration>
-            </configuration>
-        </server>
+<!--        <server>-->
+<!--            <id>central</id>-->
+<!--            <configuration>-->
+<!--                <httpConfiguration>-->
+<!--                    <all>-->
+<!--                        <connectionTimeout>20000</connectionTimeout> &lt;!&ndash; 20 seconds &ndash;&gt;-->
+<!--                        <readTimeout>900000</readTimeout> &lt;!&ndash; 120 seconds &ndash;&gt;-->
+<!--                    </all>-->
+<!--                </httpConfiguration>-->
+<!--            </configuration>-->
+<!--        </server>-->
     </servers>
+    <mirrors>
+        <mirror>
+            <id>google-maven-central</id>
+            <name>GCS Maven Central Mirror</name>
+            <url>https://maven-central.storage-download.googleapis.com/maven2/</url>
+            <mirrorOf>central</mirrorOf>
+        </mirror>
+    </mirrors>
     <profiles> 
         <profile>
             <id>jitpack.io</id>
