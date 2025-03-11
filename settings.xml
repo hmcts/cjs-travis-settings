@@ -34,7 +34,7 @@
                 <httpConfiguration>
                     <all>
                         <connectionTimeout>20000</connectionTimeout> <!-- 20 seconds -->
-                        <readTimeout>120000</readTimeout> <!-- 120 seconds -->
+                        <readTimeout>600000</readTimeout> <!-- 120 seconds -->
                     </all>
                 </httpConfiguration>
             </configuration>
