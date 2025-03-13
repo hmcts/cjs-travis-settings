@@ -17,6 +17,17 @@
                 </httpConfiguration>
             </configuration>
         </server>
+        <server>
+            <id>jitpack.io</id>
+            <configuration>
+                <httpConfiguration>
+                    <all>
+                        <connectionTimeout>20000</connectionTimeout> <!-- 20 seconds -->
+                        <readTimeout>120000</readTimeout> <!-- 120 seconds -->
+                    </all>
+                </httpConfiguration>
+            </configuration>
+        </server>
     </servers>
     <profiles> 
         <profile>
@@ -46,7 +57,7 @@
             <repositories>
                 <repository>
                     <id>central</id>
-                    <url>https://repo1.maven.org/maven2</url>
+                    <url>https://libraries-internal.mdv.cpp.nonlive/artifactory/repocentral</url>
                     <releases>
                         <enabled>true</enabled>
                     </releases>
@@ -55,7 +66,7 @@
             <pluginRepositories>
                 <pluginRepository>
                     <id>central</id>
-                    <url>https://repo1.maven.org/maven2</url>
+                    <url>https://libraries-internal.mdv.cpp.nonlive/artifactory/repocentral</url>
                     <releases>
                         <enabled>true</enabled>
                     </releases>
